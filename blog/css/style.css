@@ -1,184 +1,194 @@
-/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+/*FontsDONE*/
+@font-face {
+    font-family: ultra;
+    src: url(../fonts/serif/ultra-regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/serif/robotoslab-regular.ttf);
+    font-weight: normal;
+    font-style:normal;
+}
+@font-face {
+    font-family: rozhaone;
+    src: url(../fonts/serif/rozhaone-regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: josefinslab;
+    src: url(../fonts/serif/josefinslab-regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: opensans;
+    src: url(../fonts/sans-serif/opensans-regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: lato;
+    src: url(../fonts/sans-serif/lato-regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: montserrat;
+    src: url(../fonts/sans-serif/montserrat-regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+/* typography */
 
-        /* 
-        
-        Spacing 
-
-            - padding (shorthand and/or specific properties like padding-bottom, etc.)
-
-            - margin, (shorthand and/or specific properties like margin-top, etc.)
-
-            - letter-spacing, word-spacing, line-height
-
-            - width, max-width, min-width
-            - height, max-height, min-height
-
-        Typography 
-
-            - font-family, font-size, font-style, font-weight
-
-            - text-decoration, text-align
-
-            - color
-
-            - text-shadow, text-transform
-
-        Box, Layout and Border 
-
-            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
-
-            - box-shadow
-
-            - display, float, align-items, align-content
-
-            - grid-template-columns, grid-column-gap
-
-            - transform
-
-        Other
-
-            - :nth()-child (to target specific child elements)
-
-            - :focus, :hover, :active (to target link states)
-
-            - @font-face or @import (to import typefaces)
-
-        */
-
-
-/* ------ START WRITING YOUR CODE BELOW ------ */
-* {
-    box-sizing: border-box;
+p {
+    font-family: lato, Arial, Helvetica, sans-serif;
 }
 
+h1, h2, h3, h4 {
+    font-family: roboto, 'Times New Roman', serif;
+    letter-spacing: 0.0325rem;
+}
+
+.highlight {
+    font-family: rozhaone, Georgia, serif;
+    font-size: 5rem;
+    display: inline-block;
+    color:beige;
+    border: solid black;
+    padding: 0 1rem 0 1rem;
+    border-radius: 0.5rem;
+    border-top-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    background-color: red;
+    box-shadow: 5px 5px 4px -1px #888
+}
+h1 {
+    font-family: josefinslab, Arial, serif;
+    letter-spacing: .125rem;
+    font-size: 3.5rem;
+    margin: 2.5rem;
+    text-align: center;
+    transform: rotate(-7deg);
+    padding: 0 0 2rem 0;
+}
+h2 {
+    padding: 1.75rem 0 0 0 ;
+}
+
+/*general setup*/
+* {
+    box-sizing: border-box;}
+
 html {
-    font-size:16px;
+    font-size: 1.125rem;
 }
 
 body {
-    margin: 1.5rem auto;
+    margin: 1rem auto;
     width:90%;
     min-width:56.25rem;
 }
 
-/* Layout */
+nav{
+    border-top: solid black .125rem;
+    border-bottom: solid black .125rem;
+    font-size:2rem;
+    word-spacing: 3rem;
+    padding: 1.5rem 0rem 1.5rem 0rem;
+   }
 
-main {
-    overflow:auto;
-    min-width:45rem;
-    
+nav a{
+    text-decoration: none;
 }
 
-section {
-    float: left;
-    min-width: 22.5rem;
-    width:50%;
+a {
+    outline: none;
+}
+
+
+a:link {
+    color: #33658A;
+}
+a:visited {
+    color: #33658A;
+}
+
+a:focus {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+   }
+/* layout*/
+.main-section {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1rem;
+    }
+
+header {
+    padding: 0.0325rem 0 1rem 0;
+}
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: .15rem solid black;
+    padding-left: 1.5rem;
+}
+
+aside p {
+    border-bottom: .125rem solid black;
+    padding-bottom: 1.5rem;
+}
+
+aside {
+    font-size: .75rem;
+}
+
+.subsection {
+    display:flex
+}
+
+/* images and figures */
+img {
+    width:100%;
 }
 
 figure {
-    width:60%;
-    margin:0 10% 0 0;
-    float:left;
+    margin:0px;
 }
 
-figure img {
-    width:100%;
-    max-width:25rem;
+.article-image {
+    width: 33%;
+    float: left;
+    margin-right: 1rem;
 }
 
-figcaption {
-    margin:.375rem 0;
+.subsection {
+    margin: 1rem 0rem;
+}
+.subsection figure {
+    margin: 0rem 0.5rem;
+    background-color: bisque;
 }
 
-.long-list {
-    margin-top:0;
-}
-nav{
-    font-size:2rem;
-    word-spacing: 5rem;
-    padding-right: 3rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
+.subsection figure figcaption {
+    padding: 0.5rem 0.5rem; 
 }
 
-li{
-    font-size: 2rem;
-    display: inline-block;
-}
-footer {
-    clear: both;
-    margin-top:1.5rem;
+aside figure{
+    width: 75%;
+    background-color: bisque;
 }
 
-section, aside, nav, footer {
-  padding: .5rem;
-}
-
-/* header and footer */
-
-header, footer {
-  border-top: .125rem solid #33658A;
-  border-bottom: .125rem solid #33658A;
-}
-/* ------ START WRITING YOUR CODE BELOW THIS LINE ------ */
-/* NO changes should be made to any of the code above. */
-/* NOTE: While you will be using some of the same CSS properties, the VALUES 
-   may need to be different in order to style the page correctly. */
-/* Imported Typfaces Done*/
-@font-face {
-    font-family: josefinslab;
-    src: url(../fonts/josefinslab-regular.ttf);
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: montserrat;
-    src: url(../fonts/montserrat-regular.ttf);
-    font-style: normal;
-    font-weight: normal;
-}
-
-/* Typography Styles Done*/
-html {
-    font-family: monteserrat, Arial, sans-serif;
-}
-
-h1 {
-    font-family: josefinslab, Arial, serif;
-    letter-spacing: .125rem;
-    font-size: 3.75rem;
-    margin: 1.125rem;
-    text-align: center;
-}
-
-h2 {
-    font-family: josefinslab, Arial, serif;
-    letter-spacing: .125rem;
-    font-size: 1.5rem;
-}
-
-h2 + p {
-    text-indent: 1.5rem;
-}
-
-p {
-    font-size: .75rem;
-    letter-spacing: .03125rem;
-    word-spacing: .125rem;
-}
-
-li {
-    font-size: .75rem;
-    letter-spacing: .03125rem;
-    word-spacing: .125rem;
-}
-
-figcaption {
-    font-size: .75rem;
-    margin-bottom: 2rem;
-}
-
-/* Link Styling Done */ 
 a {
     outline: none;
 }
@@ -196,35 +206,13 @@ a:focus {
 a:hover {
     text-decoration: none;
    }
-nav a{
-    word-spacing: 5rem;
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    line-height: 3;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    
+footer p {
+    text-align: left;
+    font-size: .75rem;
 }
 
-nav a:focus {
-    color: #fff;
-    background-color: #33658A;
+footer figcaption {
+    text-align: right;
+    font-size: .75rem;
 }
 
-nav a:hover {
-    color: #fff;
-    background-color: #33658A;
-}
-
-nav a:active {
-    color: #fff;
-    background-color: #000;
-}
-
-/* Footer Styles */
-
-footer {
-    text-align: center;
-}
