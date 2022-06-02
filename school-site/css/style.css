@@ -23,7 +23,7 @@ main {
 }
 
 section {
-    float: right;
+    float: left;
     min-width: 22.5rem;
     width:50%;
 }
